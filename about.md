@@ -34,9 +34,9 @@ on the [blog](/blog/).
 The best way to reach me is email. I read everything, even if replies are slow.
 
 <div class="contact-card">
-  <a class="contact-item" href="mailto:hello@leytonh.com">
+  <a class="contact-item" href="mailto:lharrington1738@gmail.com">
     <span class="contact-label">Email</span>
-    <span class="contact-value">hello@leytonh.com</span>
+    <span class="contact-value">lharrington1738@gmail.com</span>
   </a>
   <a class="contact-item" href="https://github.com/leyton-h">
     <span class="contact-label">GitHub</span>
