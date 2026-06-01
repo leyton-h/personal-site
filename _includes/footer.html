@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-left">
+      <span class="footer-name">Leyton Harrington</span>
+      <span class="footer-meta">Built quietly. © {{ 'now' | date: "%Y" }}</span>
+    </div>
+    <ul class="footer-links">
+      {% if site.social.github %}<li><a href="https://github.com/{{ site.social.github }}">GitHub</a></li>{% endif %}
+      {% if site.social.twitter %}<li><a href="https://twitter.com/{{ site.social.twitter }}">Twitter</a></li>{% endif %}
+      {% if site.social.linkedin %}<li><a href="https://linkedin.com/in/{{ site.social.linkedin }}">LinkedIn</a></li>{% endif %}
+      <li><a href="mailto:{{ site.email }}">Email</a></li>
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+    </ul>
+  </div>
+</footer>

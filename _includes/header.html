@@ -1,0 +1,19 @@
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">Leyton</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span></label>
+
+    {%- assign cur = page.url -%}
+    <ul class="nav-links">
+      <li><a href="{{ '/blog/' | relative_url }}"      class="{% if cur contains '/blog' %}active{% endif %}">Writing</a></li>
+      <li><a href="{{ '/projects/' | relative_url }}"  class="{% if cur contains '/projects' %}active{% endif %}">Work</a></li>
+      <li><a href="{{ '/bookshelf/' | relative_url }}" class="{% if cur contains '/bookshelf' %}active{% endif %}">Bookshelf</a></li>
+      <li><a href="{{ '/about/' | relative_url }}"     class="{% if cur contains '/about' %}active{% endif %}">About</a></li>
+    </ul>
+  </nav>
+</header>

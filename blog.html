@@ -1,0 +1,33 @@
+---
+layout: default
+title: Writing
+permalink: /blog/
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1 class="page-title">Writing</h1>
+    <p class="page-subtitle">Notes on building, medicine, and paying attention. {{ site.posts | size }} posts.</p>
+  </header>
+
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+  <section class="archive-year">
+    <h2 class="archive-year-label">{{ year.name }}</h2>
+    <ul class="post-list">
+      {% for post in year.items %}
+      <li class="post-row">
+        <a class="post-row-link" href="{{ post.url | relative_url }}">
+          <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+          <span class="post-row-title">{{ post.title }}</span>
+          {% if post.subtitle %}<span class="post-row-sub">{{ post.subtitle }}</span>{% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+
+  {% if site.posts.size == 0 %}
+  <p class="empty-state">No posts yet — the first one is coming.</p>
+  {% endif %}
+</div>

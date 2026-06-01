@@ -1,0 +1,60 @@
+---
+layout: default
+title: null
+---
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="hero-eyebrow">Florida · building in public</p>
+    <h1 class="hero-title">
+      Leyton<span class="hero-period">.</span>
+    </h1>
+    <p class="hero-lede">
+      I build things and write about what I learn — mostly at the intersection
+      of medicine, product, and the discipline of doing the boring work for a
+      very long time. Founder of <a href="/projects/">Happyglow</a>.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/blog/">Read the writing</a>
+      <a class="btn btn-ghost" href="/about/">About me →</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section wrap">
+  <div class="section-head">
+    <h2 class="section-title">Latest writing</h2>
+    <a class="section-link" href="/blog/">All posts →</a>
+  </div>
+
+  <ul class="post-list">
+    {% for post in site.posts limit:4 %}
+    <li class="post-row">
+      <a class="post-row-link" href="{{ post.url | relative_url }}">
+        <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+        <span class="post-row-title">{{ post.title }}</span>
+        {% if post.subtitle %}<span class="post-row-sub">{{ post.subtitle }}</span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="home-section wrap">
+  <div class="section-head">
+    <h2 class="section-title">Currently</h2>
+  </div>
+  <div class="now-grid">
+    <div class="now-card">
+      <span class="now-label">Building</span>
+      <p>Happyglow — a premium, physician-guided telemedicine platform. Care, engineered.</p>
+    </div>
+    <div class="now-card">
+      <span class="now-label">Reading</span>
+      <p>Working through my <a href="/bookshelf/">bookshelf</a> — a slow, deliberate list.</p>
+    </div>
+    <div class="now-card">
+      <span class="now-label">Thinking about</span>
+      <p>Compounding — in chemistry, in business, in habit. The long game over everything.</p>
+    </div>
+  </div>
+</section>
