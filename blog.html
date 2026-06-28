@@ -6,7 +6,6 @@ permalink: /blog/
 <div class="wrap">
   <header class="page-head">
     <h1 class="page-title">Writing</h1>
-    <p class="page-subtitle">Notes on building, medicine, and paying attention. {{ site.posts | size }} posts.</p>
   </header>
 
   {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}

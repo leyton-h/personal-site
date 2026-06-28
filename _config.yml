@@ -1,19 +1,13 @@
 # --- Site settings ---
-title: Leyton Harrington
-tagline: Builder, writer, founder.
-description: >-
-  Personal site of Leyton — notes on building, medicine, and the things
-  worth paying attention to.
-author: Leyton
-email: lharrington1738@gmail.com
+title: leyton harrington
 url: "https://leytonh.com"
 baseurl: ""
 
-# --- Social / contact (edit freely) ---
+# --- Social ---
 social:
-  github: leyton-h
-  # twitter: yourhandle
-  # linkedin: yourhandle
+  youtube: leytonh
+  x: leytonpi
+  linkedin: leytonh
 
 # --- Build settings ---
 markdown: kramdown
@@ -25,14 +19,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# --- Collections / pagination handled manually in templates ---
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-feed:
-  path: /feed.xml
 
 # --- Defaults ---
 defaults:

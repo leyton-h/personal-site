@@ -4,17 +4,17 @@
    ============================================================ */
 
 :root {
-  --ink:        #16161a;
-  --ink-soft:   #3c3c44;
-  --muted:      #6b6b75;
-  --faint:      #9a9aa3;
-  --line:       #e6e2d9;
-  --line-soft:  #efece4;
-  --bg:         #faf8f3;
-  --bg-raised:  #ffffff;
-  --accent:     #b8472f;   /* burnt sienna — warm, distinct, not Happyglow */
-  --accent-ink: #8f3623;
-  --shadow:     0 1px 2px rgba(20,20,26,.04), 0 8px 28px rgba(20,20,26,.06);
+  --ink:        #f2f2f4;
+  --ink-soft:   #c7c7cd;
+  --muted:      #8a8a92;
+  --faint:      #5c5c63;
+  --line:       #242428;
+  --line-soft:  #161619;
+  --bg:         #000000;
+  --bg-raised:  #0e0e11;
+  --accent:     #f2f2f4;
+  --accent-ink: #ffffff;
+  --shadow:     0 1px 2px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.55);
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -22,22 +22,6 @@
 
   --wrap: 720px;
   --wrap-wide: 1080px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink:       #ece9e1;
-    --ink-soft:  #c9c6bd;
-    --muted:     #9b988f;
-    --faint:     #6e6c66;
-    --line:      #2a2a30;
-    --line-soft: #232329;
-    --bg:        #131316;
-    --bg-raised: #1a1a1f;
-    --accent:    #e0795f;
-    --accent-ink:#eb8e76;
-    --shadow:    0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35);
-  }
 }
 
 /* --- reset --- */
@@ -54,7 +38,8 @@ body {
   text-rendering: optimizeLegibility;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 img { max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
@@ -129,7 +114,7 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 /* ============================================================
    Layout shell
    ============================================================ */
-.site-main { flex: 1 0 auto; }
+.site-main { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 
 /* ============================================================
    Hero
@@ -212,54 +197,17 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 @media (max-width: 720px) { .now-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
-   Home — single viewport, no scroll
+   Home — barebones, single viewport, no scroll
    ============================================================ */
-.is-home { height: 100dvh; overflow: hidden; }
-.is-home .site-main { min-height: 0; display: flex; }
-
+.is-home .site-main { display: flex; }
 .home {
-  display: flex; flex-direction: column;
-  justify-content: center; gap: clamp(28px, 5vh, 64px);
-  height: 100%; padding-block: clamp(20px, 4vh, 56px);
+  display: flex; flex-direction: column; justify-content: center;
+  height: 100%; padding-block: clamp(20px, 5vh, 64px);
 }
-
-.home-hero { max-width: 760px; }
 .home-title {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(52px, 9vw, 104px); line-height: .92;
-  letter-spacing: -.03em; margin: 14px 0 0; color: var(--ink);
-}
-.home-lede {
-  font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5;
-  color: var(--ink-soft); max-width: 33em; margin: 22px 0 0;
-}
-.home .hero-actions { margin-top: 28px; }
-
-.home-grid {
-  display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: clamp(28px, 5vw, 72px); align-items: start;
-}
-.home-block .section-head { margin-bottom: 14px; }
-.home-block .section-title { font-size: clamp(20px, 2.4vw, 26px); }
-
-/* compact post rows on home */
-.home .post-row-link { grid-template-columns: 1fr; gap: 2px; padding: 12px 4px; }
-.home .post-row-date { order: -1; font-size: 12px; }
-.home .post-row-title { font-size: 17px; }
-
-/* currently as a tight list */
-.now-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.now-row { display: grid; gap: 2px; }
-.now-row p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.45; }
-
-/* slim footer + hidden footer on home */
-.is-home .site-footer { display: none; }
-
-@media (max-width: 760px) {
-  .is-home { height: auto; overflow: visible; }
-  .is-home .site-footer { display: block; }
-  .home { height: auto; justify-content: flex-start; }
-  .home-grid { grid-template-columns: 1fr; gap: 36px; }
+  font-size: clamp(56px, 12vw, 128px); line-height: .9;
+  letter-spacing: -.03em; margin: 0; color: var(--ink);
 }
 
 /* ============================================================
@@ -385,7 +333,7 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 /* ============================================================
    Footer
    ============================================================ */
-.site-footer { border-top: 1px solid var(--line-soft); margin-top: 40px; padding: 40px 0; }
+.site-footer { flex: 0 0 auto; border-top: 1px solid var(--line-soft); margin-top: 0; padding: 24px 0; }
 .footer-inner { max-width: var(--wrap-wide); display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; }
 .footer-left { display: flex; flex-direction: column; }
 .footer-name { font-family: var(--serif); font-size: 17px; color: var(--ink); }
