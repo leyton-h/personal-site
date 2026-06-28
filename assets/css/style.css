@@ -212,6 +212,57 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 @media (max-width: 720px) { .now-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
+   Home — single viewport, no scroll
+   ============================================================ */
+.is-home { height: 100dvh; overflow: hidden; }
+.is-home .site-main { min-height: 0; display: flex; }
+
+.home {
+  display: flex; flex-direction: column;
+  justify-content: center; gap: clamp(28px, 5vh, 64px);
+  height: 100%; padding-block: clamp(20px, 4vh, 56px);
+}
+
+.home-hero { max-width: 760px; }
+.home-title {
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(52px, 9vw, 104px); line-height: .92;
+  letter-spacing: -.03em; margin: 14px 0 0; color: var(--ink);
+}
+.home-lede {
+  font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5;
+  color: var(--ink-soft); max-width: 33em; margin: 22px 0 0;
+}
+.home .hero-actions { margin-top: 28px; }
+
+.home-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: clamp(28px, 5vw, 72px); align-items: start;
+}
+.home-block .section-head { margin-bottom: 14px; }
+.home-block .section-title { font-size: clamp(20px, 2.4vw, 26px); }
+
+/* compact post rows on home */
+.home .post-row-link { grid-template-columns: 1fr; gap: 2px; padding: 12px 4px; }
+.home .post-row-date { order: -1; font-size: 12px; }
+.home .post-row-title { font-size: 17px; }
+
+/* currently as a tight list */
+.now-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.now-row { display: grid; gap: 2px; }
+.now-row p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.45; }
+
+/* slim footer + hidden footer on home */
+.is-home .site-footer { display: none; }
+
+@media (max-width: 760px) {
+  .is-home { height: auto; overflow: visible; }
+  .is-home .site-footer { display: block; }
+  .home { height: auto; justify-content: flex-start; }
+  .home-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/* ============================================================
    Page + prose
    ============================================================ */
 .page-head { padding: clamp(48px, 8vw, 84px) 0 8px; }
