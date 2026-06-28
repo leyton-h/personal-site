@@ -2,18 +2,11 @@
 layout: page
 title: Work
 permalink: /projects/
+body_class: is-work
 ---
 
-<div class="project-list">
-  <article class="project">
-    <div class="project-head">
-      <h2 class="project-name">Happyglow</h2>
-      <span class="project-status status-live">Building</span>
-    </div>
-    <p class="project-tag">Telemedicine</p>
-    <p>
-      Happyglow is my telemedicine company — making quality clinical care
-      simple to access online. <a href="https://happyglow.com">happyglow.com</a>
-    </p>
-  </article>
-</div>
+<a class="work-tile" href="https://happyglow.com" target="_blank" rel="noopener">
+  <span class="work-tile-name">Happyglow</span>
+  <span class="work-tile-desc">An aesthetic telemedicine company.</span>
+  <span class="work-tile-go">happyglow.com →</span>
+</a>

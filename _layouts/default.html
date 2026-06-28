@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 {% include head.html %}
-<body class="{% if page.url == '/' %}is-home{% endif %}">
+<body class="{% if page.url == '/' %}is-home{% endif %}{% if page.body_class %} {{ page.body_class }}{% endif %}">
   {% include header.html %}
   <main class="site-main">
     {{ content }}
