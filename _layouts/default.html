@@ -2,10 +2,12 @@
 <html lang="en">
 {% include head.html %}
 <body class="{% if page.url == '/' %}is-home{% endif %}{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  <canvas id="bg-neural" aria-hidden="true"></canvas>
   {% include header.html %}
   <main class="site-main">
     {{ content }}
   </main>
   {% include footer.html %}
+  <script src="{{ '/assets/js/neural.js' | relative_url }}" defer></script>
 </body>
 </html>
