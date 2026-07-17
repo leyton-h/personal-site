@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm studying math and physics at Florida Gulf Coast University. My interests span business, technology, and medicine.
+I'm studying economics and math at Florida Gulf Coast University. My interests span business, technology, and medicine.
 
 ---
 
