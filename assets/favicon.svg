@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="#04101c"
-        stroke="#4d6bff" stroke-opacity="0.28" stroke-width="2"/>
-  <text x="50%" y="50%" dy="0.34em" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif" font-size="38"
-        font-style="italic" fill="#4d6bff">l</text>
+  <rect width="64" height="64" fill="#ffffff"/>
+  <text x="50%" y="50%" dy="0.35em" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#141414">l</text>
 </svg>

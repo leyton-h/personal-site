@@ -1,25 +1,8 @@
 ---
 layout: default
 ---
-<article class="wrap prose post">
-  <header class="post-head">
-    <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {% if page.tags.size > 0 %}
-        <span class="dot">·</span>
-        <span class="post-tags">
-          {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-        </span>
-      {% endif %}
-      {% if page.reading_time %}<span class="dot">·</span><span>{{ page.reading_time }}</span>{% endif %}
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
-  </header>
+<p><a href="{{ '/' | relative_url }}">← leyton harrington</a></p>
+<h1>{{ page.title }}</h1>
+<p class="date">{{ page.date | date: "%B %-d, %Y" }}</p>
 
-  {{ content }}
-
-  <footer class="post-foot">
-    <a class="back-link" href="{{ '/blog/' | relative_url }}">← All writing</a>
-  </footer>
-</article>
+{{ content }}
