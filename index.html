@@ -3,39 +3,36 @@ layout: default
 title: null
 ---
 <h1>leyton harrington</h1>
-<p class="subtitle">Founder of Happyglow. Studying economics &amp; math.</p>
-<p class="socials">
-  <a href="https://x.com/leytonpi">X</a>
-  <a href="https://linkedin.com/in/leytonh">LinkedIn</a>
-  <a href="https://youtube.com/@leytonh">YouTube</a>
-</p>
+<p>Founder of Happyglow. Studying economics &amp; math.</p>
+
+<p><a href="https://x.com/leytonpi">X</a> &middot; <a href="https://linkedin.com/in/leytonh">LinkedIn</a> &middot; <a href="https://youtube.com/@leytonh">YouTube</a></p>
 
 <h2>About</h2>
+
 <p>
-  I'm a student at Florida Gulf Coast University studying economics and math,
-  with interests across business, technology, and medicine. I'm currently
-  building <a href="https://happyglow.com">Happyglow</a>, an aesthetic
-  telemedicine company.
+  Studying economics and math at Florida Gulf Coast University.<br>
+  Interested in business, technology, and medicine.<br>
+  Building <a href="https://happyglow.com">Happyglow</a>, an aesthetic telemedicine company.
 </p>
 
 <h2>Writing</h2>
+
 {% if site.posts.size > 0 %}
 <ul>
   {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <span class="date">{{ post.date | date: "%b %Y" }}</span>
-  </li>
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%b %Y" }})</li>
   {% endfor %}
 </ul>
 {% else %}
-<p class="muted">Coming soon.</p>
+<p>Coming soon.</p>
 {% endif %}
 
 <h2>Work</h2>
+
 <ul>
-  <li><a href="https://happyglow.com">Happyglow</a> — an aesthetic telemedicine company.</li>
+  <li><a href="https://happyglow.com">Happyglow</a> &mdash; an aesthetic telemedicine company.</li>
 </ul>
 
 <h2>Bookshelf</h2>
-<p class="muted">Coming soon.</p>
+
+<p>Coming soon.</p>

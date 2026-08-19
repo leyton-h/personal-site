@@ -1,16 +1,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
 
-  {%- if page.title -%}
-    <title>{{ page.title }} · {{ site.title }}</title>
-  {%- else -%}
-    <title>{{ site.title }}</title>
-  {%- endif -%}
+  {%- if page.title -%}<title>{{ page.title }} · {{ site.title }}</title>{%- else -%}<title>{{ site.title }}</title>{%- endif -%}
 
   {% seo %}
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body { font-size: 15px; padding-left: 1rem; }
+    h1, h2, h3 { font-size: 1.2em; }
+  </style>
+
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 </head>
